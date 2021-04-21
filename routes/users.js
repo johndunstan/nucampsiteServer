@@ -20,11 +20,11 @@ router.post('/signup', (req, res) => {
         res.setHeader('Content-Type', 'application/json')
         res.json({ err: err })
       } else {
-        if (req.body.firstName) {
-          user.firstName = req.body.firstName
+        if (req.body.firstname) {
+          user.firstname = req.body.firstname
         }
-        if (req.body.lastName) {
-          user.lastName = req.body.lastName
+        if (req.body.lastname) {
+          user.lastname = req.body.lastname
         }
         user.save((err) => {
           if (err) {
